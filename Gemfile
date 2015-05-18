@@ -44,4 +44,7 @@ group :development, :test do
 
   #Easy file attachment management for ActiveRecord
   gem "paperclip", "~> 4.2"
+
+  # Twitter's Bootstrap, converted to Sass and ready to drop into Rails or Compass
+  gem 'bootstrap-sass', '~> 3.3.4.1'
 end
