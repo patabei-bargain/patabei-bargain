@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Food and groceries products</h1>
+
+<div class="container">
+<div class="row">
+    <% @cproducts.each do |cproduct| %>
+      <div class="col-sm3 col-md-4">
+        <h3 class="cheading"><%= cproduct.title %></h3>
+        <div class="thumbnail">
+
+        <%= cproduct.title %>
+        <%= image_tag cproduct.image.url(:medium) %>
+        <%= link_to 'Show', cproduct %>
+        <%= link_to 'Edit', edit_cproduct_path(cproduct) %>
+        <%= link_to 'Destroy', cproduct, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Cproduct', new_cproduct_path %>
