@@ -13,7 +13,7 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="assets/Pricecheck.jpg" alt="Price">
-      <div class="carousel-caption">
+      <div class="carousel-caption cap">
         <h3>Chania</h3>
         <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
       </div>
@@ -57,14 +57,17 @@
 
 
 
-  <div class="container">
+  <div class="container ">
   <div class="row">
+    <h1> Categories </h1>
     <% @categories.each do |category| %>
       <div class="col-sm-4 col-md-4">
-        <h3 class="cheading"><%= category.title %></h3>
         <div class="thumbnail">
 
           <%= image_tag category.image.url(:medium) %>
+          <hr class="line">
+          <h3 class="cheading">
+          <%= category.title %></h3>
 
         <%= link_to 'Show', cproducts_path %>
         <%= link_to 'Edit', edit_category_path(category) %>

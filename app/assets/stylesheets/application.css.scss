@@ -19,8 +19,44 @@
 
 body {
   padding-top: 70px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .cheading {
   text-align: center;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.navbar {
+  padding-top: 15px;
+  height: 80px;
+  background-color: #f84545;
+
+
+
+}
+
+.navbar-brand {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -3px;
+
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.line {
+
+  border-top: 1px solid black;
+}
+
+#myCarousel {
+  margin-bottom: 100px;
+}
+
+.thumbnail {
+  border-color: black
 }

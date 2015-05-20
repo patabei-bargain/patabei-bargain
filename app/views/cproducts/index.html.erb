@@ -6,12 +6,16 @@
 <div class="row">
     <% @cproducts.each do |cproduct| %>
       <div class="col-sm3 col-md-4">
-        <h3 class="cheading"><%= cproduct.title %></h3>
+      
         <div class="thumbnail">
 
-        <%= cproduct.title %>
-        <%= image_tag cproduct.image.url(:medium) %>
-        <%= link_to 'Show', cproduct %>
+          <%= image_tag cproduct.image.url(:medium) %>
+            <hr class="line">
+            <h3 class="cheading">
+          <%= cproduct.title %>
+        </h3>
+
+        <%= link_to 'Show', companies_path %>
         <%= link_to 'Edit', edit_cproduct_path(cproduct) %>
         <%= link_to 'Destroy', cproduct, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>

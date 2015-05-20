@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Companies</h1>
+
+
+<div class="container">
+<div class="row">
+    <% @companies.each do |company| %>
+      <div class="col-sm3 col-md-4">
+
+        <div class="thumbnail">
+
+          <%= image_tag company.image.url(:medium) %>
+            <hr class="line">
+            <h3 class="cheading">
+          <%= company.title %>
+        </h3>
+
+        <%= link_to 'Show', companies_path %>
+        <%= link_to 'Edit', edit_company_path(company) %>
+        <%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'New Company', new_company_path %>
